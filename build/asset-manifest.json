@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/static/css/main.9c8414bf.css",
+    "main.js": "/static/js/main.894bf8e6.js",
+    "static/js/787.1ed0c42c.chunk.js": "/static/js/787.1ed0c42c.chunk.js",
+    "static/media/postgresql.png": "/static/media/postgresql.c2d134bb56bf8d0d8859.png",
+    "static/media/webApp.png": "/static/media/webApp.ba80af1b0dcb16e3c3df.png",
+    "static/media/htmlcssjs.png": "/static/media/htmlcssjs.aac2c4a963a2f963f8c1.png",
+    "static/media/firebase.png": "/static/media/firebase.bff5748e0ad72bf0c427.png",
+    "static/media/reactjs.png": "/static/media/reactjs.73dbb5bcec516da82694.png",
+    "static/media/isu_logo.png": "/static/media/isu_logo.f2ec374d17da36891f4b.png",
+    "static/media/NodeJs.png": "/static/media/NodeJs.abfaef34ea49d0c7cd3c.png",
+    "static/media/angular.png": "/static/media/angular.d5338b980a967b6d8df7.png",
+    "static/media/location.png": "/static/media/location.7f50aec7b5387fef897f.png",
+    "static/media/sqlServer.png": "/static/media/sqlServer.c6c669a60b0470ea2a01.png",
+    "static/media/mail.png": "/static/media/mail.b62ff04b814f062cadd8.png",
+    "static/media/api.png": "/static/media/api.574fde6f92b9bcab978a.png",
+    "static/media/call.png": "/static/media/call.6d762e082919dc440d32.png",
+    "static/media/git.png": "/static/media/git.fc497857196dc743cd9d.png",
+    "static/media/JSL_logo.png": "/static/media/JSL_logo.1f26c7ad962e7e27a8d3.png",
+    "static/media/CloudServer.png": "/static/media/CloudServer.3fbb53c747eb135efdc0.png",
+    "index.html": "/index.html",
+    "main.9c8414bf.css.map": "/static/css/main.9c8414bf.css.map",
+    "main.894bf8e6.js.map": "/static/js/main.894bf8e6.js.map",
+    "787.1ed0c42c.chunk.js.map": "/static/js/787.1ed0c42c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9c8414bf.css",
+    "static/js/main.894bf8e6.js"
+  ]
+}
