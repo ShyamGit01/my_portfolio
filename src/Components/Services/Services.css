@@ -1,0 +1,20 @@
+
+.col{
+    width: 100px;
+    height: 200px;
+   float: left;
+}
+
+.service-title{
+    font-size: 1.5rem;
+}
+
+.service-description{
+    font-size: 1.2rem;
+}
+
+
+img{
+    max-width: 100px;
+
+}
