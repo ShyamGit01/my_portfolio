@@ -1,6 +1,7 @@
 import { Container, Typography } from '@mui/material'
 
-export default function About() {
+export default function About(props) {
+    console.log("props adat==>", props.data);
     return (
         <>
             <div className='title'>ABOUT ME</div>
@@ -11,9 +12,9 @@ export default function About() {
             <Container>
                 {/* <div class="about-body"> */}
                 <Typography>
-                    I am a full-stack developer,
-                    working with both back-end and front-end technologies together. Also design databases as per project requirements.
-
+                    {/* I am a full-stack developer,
+                    working with both back-end and front-end technologies together. Also design databases as per project requirements. */}
+                    {props.data}
                     <br />
                 </Typography>
                 {/* In addition, have a good understanding of automated testing, version control. */}

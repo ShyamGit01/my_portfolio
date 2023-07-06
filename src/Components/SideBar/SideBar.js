@@ -14,6 +14,7 @@ const ListItemComponent = () => {
 }
 
 export default function SideBar() {
+  
   return (
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
@@ -42,7 +43,7 @@ export default function SideBar() {
               'Education',
               'Experience',
               'Work',
-              'Contact'].map((text, index) => (
+              'Contact','Resume'].map((text, index) => (
                
                 <ListItem button key={text} component='a' href={text}>
             

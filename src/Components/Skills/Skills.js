@@ -22,7 +22,7 @@ const Label = styled(Paper)(({ theme }) => ({
     borderBottomRightRadius: 0,
 }));
 
-export default function Skills() {
+export default function Skills(props) {
     return (
         <>
             <div className='title'>SKILLS</div>
@@ -32,7 +32,7 @@ export default function Skills() {
 
             <Box sx={{ width: '75vw', Height: '80vh' }}>
                 <Masonry columns={4} spacing={2}>
-                    {itemData.map((item, index) => (
+                    {props.data.map((item, index) => (
                         <div key={index}>
                             {/* <Label>{index + 1}</Label> */}
                             <img

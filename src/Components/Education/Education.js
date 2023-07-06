@@ -1,8 +1,8 @@
 import { Typography } from '@mui/material'
 import { Timeline, TimelineConnector, TimelineContent, TimelineDot, TimelineItem, TimelineOppositeContent, TimelineSeparator } from '@mui/lab'
-import { Book,  MenuBook,  School } from '@mui/icons-material'
+import { Book, MenuBook, School } from '@mui/icons-material'
 
-export default function Education() {
+export default function Education({ data }) {
     return (
         <>
             <div className='title'>EDUCATION</div>
@@ -12,7 +12,7 @@ export default function Education() {
             <br />
 
             <Timeline position="left">
-                <TimelineItem>
+                {/* <TimelineItem>
                     <TimelineOppositeContent
                         sx={{ m: 'auto 0' }}
                         align="right"
@@ -80,7 +80,32 @@ export default function Education() {
                         </Typography>
                         <Typography>Balikuda High School, Balikuda</Typography>
                     </TimelineContent>
-                </TimelineItem>
+                </TimelineItem> */}
+
+
+                {data.map(el => <TimelineItem>
+                    <TimelineOppositeContent
+                        sx={{ m: 'auto 0' }}
+                        variant="body2"
+                        color="text.secondary"
+                    >
+                        {el.date}
+                    </TimelineOppositeContent>
+                    <TimelineSeparator>
+                        <TimelineConnector sx={{ bgcolor: 'primary.main' }} />
+                        <TimelineDot color="primary">
+                            <MenuBook />
+                        </TimelineDot>
+                        <TimelineConnector sx={{ bgcolor: 'primary.main' }} />
+                    </TimelineSeparator>
+                    <TimelineContent sx={{ py: '12px', px: 2 }}>
+                        <Typography variant="h6" component="span">
+                        {el.course}
+                        </Typography>
+                        <Typography>{el.institute}, {el.location}</Typography>
+                        <Typography>{el.grade}</Typography>
+                    </TimelineContent>
+                </TimelineItem>)}
             </Timeline>
 
         </>

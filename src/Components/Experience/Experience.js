@@ -6,7 +6,7 @@ import { Accordion, AccordionDetails, AccordionSummary, Typography } from '@mui/
 import { Timeline, TimelineConnector, TimelineContent, TimelineDot, TimelineItem, TimelineOppositeContent, TimelineSeparator } from '@mui/lab'
 import { Book, ExpandMore, MenuBook, School } from '@mui/icons-material'
 
-export default function Experience() {
+export default function Experience({ data }) {
     return (
         <>
             <div className='title'>EXPERIENCE</div>
@@ -15,22 +15,22 @@ export default function Experience() {
             <br />
 
             <Timeline position="left">
-                <TimelineItem>
+                {data.map((el, i) => <TimelineItem key={i}>
                     <TimelineOppositeContent
                         sx={{ m: 'auto 0' }}
                         align="right"
                         variant="body2"
                         color="text.secondary"
                     >
-                        2021 - Present
+                        {el.time}
                     </TimelineOppositeContent>
                     <TimelineSeparator>
-                        <TimelineConnector sx={{ bgcolor: 'success.main' }} />
-                        <TimelineDot color="success">
+                        <TimelineConnector sx={{ bgcolor: (el.isActivelyWorking) ? 'success.main' : 'secondary.main' }} />
+                        <TimelineDot color={(el.isActivelyWorking) ? 'success' : 'error'}>
                             {/* <School /> */}
-                            <img src={isu} alt="" style={{backgroundColor: 'white', borderRadius: '50%'}} />
+                            <img src={`${el.logo}`} srcSet={`${el.logo}`} loading="lazy" alt="" style={{ backgroundColor: 'white', borderRadius: '50%' }} />
                         </TimelineDot>
-                        <TimelineConnector sx={{ bgcolor: 'success.main' }} />
+                        <TimelineConnector sx={{ bgcolor: (el.isActivelyWorking) ? 'success.main' : 'secondary.main' }} />
                     </TimelineSeparator>
                     <TimelineContent sx={{ py: '12px', px: 2 }}>
                         <Accordion>
@@ -39,47 +39,16 @@ export default function Experience() {
                                 aria-controls="panel1a-content"
                                 id="panel1a-header"
                             >
-                                <Typography>IServeU Technology Pvt. Ltd. (ISU)</Typography>
+                                <Typography>{el.company}</Typography>
                             </AccordionSummary>
-                            <AccordionDetails style={{textAlign: 'initial'}}>
-                                <Typography>Job Role: Software Engineer</Typography>
-                                <Typography>Technology: Nodejs (Backend)</Typography>
+                            <AccordionDetails style={{ textAlign: 'initial' }}>
+                                <Typography>Job Role: {el.jobRole}</Typography>
+                                <Typography>Technology: {el.technology}</Typography>
                             </AccordionDetails>
                         </Accordion>
                     </TimelineContent>
                 </TimelineItem>
-                <TimelineItem>
-                    <TimelineOppositeContent
-                        sx={{ m: 'auto 0' }}
-                        variant="body2"
-                        color="text.secondary"
-                    >
-                        2016 - 2018
-                    </TimelineOppositeContent>
-                    <TimelineSeparator>
-                        <TimelineConnector sx={{ bgcolor: 'secondary.main' }} />
-                        <TimelineDot color="error">
-                            {/* <Book /> */}
-                            <img src={jsl} alt="" style={{backgroundColor: 'white', borderRadius: '50%'}}/>
-                        </TimelineDot>
-                        <TimelineConnector sx={{ bgcolor: 'secondary.main' }} />
-                    </TimelineSeparator>
-                    <TimelineContent sx={{ py: '12px', px: 2 }}>
-                        <Accordion>
-                            <AccordionSummary
-                                expandIcon={<ExpandMore />}
-                                aria-controls="panel1a-content"
-                                id="panel1a-header"
-                            >
-                                <Typography>Jindal Stainless LTD (JSL)</Typography>
-                            </AccordionSummary>
-                            <AccordionDetails style={{textAlign: 'initial'}}>
-                                <Typography>Job Role: Junior Engineer</Typography>
-                                <Typography>Technology: Asp.net, C#</Typography>
-                            </AccordionDetails>
-                        </Accordion>
-                    </TimelineContent>
-                </TimelineItem>
+                )}
 
             </Timeline>
         </>
